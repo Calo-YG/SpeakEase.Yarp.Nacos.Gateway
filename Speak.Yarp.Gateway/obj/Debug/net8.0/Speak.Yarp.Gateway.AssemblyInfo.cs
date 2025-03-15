@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Speak.Yarp.Gateway")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd32dbf0bb3ed1267f32b9f7f3f3a8f1e8d40b52")]
 [assembly: System.Reflection.AssemblyProductAttribute("Speak.Yarp.Gateway")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Speak.Yarp.Gateway")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

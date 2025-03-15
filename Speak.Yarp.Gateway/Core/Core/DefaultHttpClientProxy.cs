@@ -224,17 +224,17 @@ public class DefaultHttpClientProxy
 
             try
             {
-                  var client = _clientFactory?.CreateClient(Constants.ClientName) ?? new HttpClient();
+                 using  var client = _clientFactory?.CreateClient("Nacos") ?? new HttpClient();
 
                   using var cts = new CancellationTokenSource();
                   cts.CancelAfter(TimeSpan.FromMilliseconds(8000));
 
                   var requestUrl = $"{url}?{InitParams(paramters, body)}";
-                  var requestMessage = new HttpRequestMessage(method, requestUrl);
+                  using var requestMessage = new HttpRequestMessage(method, requestUrl);
 
                   BuildHeader(requestMessage, headers);
 
-                  var responseMessage = await client.SendAsync(requestMessage, cts.Token).ConfigureAwait(false);
+                  using var responseMessage = await client.SendAsync(requestMessage, cts.Token).ConfigureAwait(false);
 
                   if (responseMessage.IsSuccessStatusCode)
                   {

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "E9PxTNKQx7aKJWYy1YDRBT87tthCq5xOZda1OTkVT10=",
+  "Source": "Speak.Yarp.Gateway",
+  "BasePath": "_content/Speak.Yarp.Gateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

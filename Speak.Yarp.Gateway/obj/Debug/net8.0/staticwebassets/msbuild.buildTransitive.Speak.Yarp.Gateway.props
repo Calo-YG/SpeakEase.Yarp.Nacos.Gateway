@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Speak.Yarp.Gateway.props" />
+</Project>

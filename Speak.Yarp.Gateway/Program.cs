@@ -54,6 +54,7 @@ builder.Services.Configure<DefaultNacosOptions>(options =>
       options.DefaultGroup = defaultConfig!.DefaultGroup;
       options.Count = defaultConfig.Count;
 });
+builder.AddDefualtYapNacosExtensions();
 #endregion
 
 var app = builder.Build();

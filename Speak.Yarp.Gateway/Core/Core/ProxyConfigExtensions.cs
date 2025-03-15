@@ -46,11 +46,15 @@ public static class ProxyConfigExtensions
             return destinations;
       }
 
-      public static void AddDefualtYapNacosExtensions(this WebApplicationBuilder builder,Func<string,string> func = null,string section = "GatewayServiceOptions")
+      public static void AddDefualtYapNacosExtensions(this WebApplicationBuilder builder,Func<string,string>? func = null,string section = "GatewayServiceOptions")
       {
             builder.Services.Configure<GatewayServiceOption>(builder.Configuration.GetSection("GatewayServiceOptions"));
             builder.Services.AddSingleton<IServiceFormatter, ServiceFormatter>(sp =>
             {
+                  if (func != null)
+                  {
+                        return new ServiceFormatter(func);
+                  }
                   return new ServiceFormatter((str) => str.Split('_')[1].ToLower());
             });
             builder.Services.AddSingleton<IProxyConfigProvider, DefaultProxyConfigProvider>();
